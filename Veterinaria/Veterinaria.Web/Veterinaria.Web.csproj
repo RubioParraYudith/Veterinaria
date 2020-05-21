@@ -187,7 +187,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Consult.cs" />
+    <Compile Include="Models\History.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Owner.cs" />
     <Compile Include="Models\Pet.cs" />
@@ -377,6 +379,12 @@
     <EmbeddedResource Include="Migrations\202005211951478_FirstMigration.resx">
       <DependentUpon>202005211951478_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Veterinaria.Common\Veterinaria.Common.csproj">
+      <Project>{ebe08bd5-cfe9-4051-ba0d-11caa582e851}</Project>
+      <Name>Veterinaria.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -29,5 +29,13 @@ namespace Veterinaria.Web.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Owner> Owners { get; set; }
+        public DbSet<Pet> Pets { get; set; }
+        public DbSet<Consult> Consults { get; set; }
+        public DbSet<Veterinary> Veterinaries { get; set; }
+        public DbSet<History> Histories { get; set; }
+
+
+
     }
 }
