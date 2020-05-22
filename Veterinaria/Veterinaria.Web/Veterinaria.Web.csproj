@@ -169,10 +169,15 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Clase\Utilities.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ConsultsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OwnersController.cs" />
+    <Compile Include="Controllers\PetsController.cs" />
     <Compile Include="Controllers\PrincipalController.cs" />
+    <Compile Include="Controllers\VeterinariesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,6 +188,14 @@
     <Compile Include="Migrations\202005211951478_FirstMigration.cs" />
     <Compile Include="Migrations\202005211951478_FirstMigration.Designer.cs">
       <DependentUpon>202005211951478_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005222059259_updateDb.cs" />
+    <Compile Include="Migrations\202005222059259_updateDb.Designer.cs">
+      <DependentUpon>202005222059259_updateDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005222135562_updateDb2.cs" />
+    <Compile Include="Migrations\202005222135562_updateDb2.Designer.cs">
+      <DependentUpon>202005222135562_updateDb2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -357,9 +370,21 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Consults\Create.cshtml" />
+    <Content Include="Views\Consults\Delete.cshtml" />
+    <Content Include="Views\Consults\Details.cshtml" />
+    <Content Include="Views\Consults\Edit.cshtml" />
+    <Content Include="Views\Consults\Index.cshtml" />
+    <Content Include="Views\Pets\Create.cshtml" />
+    <Content Include="Views\Pets\Delete.cshtml" />
+    <Content Include="Views\Pets\Details.cshtml" />
+    <Content Include="Views\Pets\Edit.cshtml" />
+    <Content Include="Views\Pets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Owners\" />
+    <Folder Include="Views\Veterinaries\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -378,6 +403,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005211951478_FirstMigration.resx">
       <DependentUpon>202005211951478_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005222059259_updateDb.resx">
+      <DependentUpon>202005222059259_updateDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005222135562_updateDb2.resx">
+      <DependentUpon>202005222135562_updateDb2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

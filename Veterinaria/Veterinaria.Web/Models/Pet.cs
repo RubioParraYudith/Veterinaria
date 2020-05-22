@@ -22,11 +22,9 @@ namespace Veterinaria.Web.Models
 
         public string PetType { get; set; }
         [Display(Name = "Edad")]
-        [MaxLength(6)]
 
         public int Age { get; set; }
         [Display(Name = "Fecha de Nacimiento")]
-        [MaxLength(50)]
 
         public DateTime BirthDate { get; set; }
         [Required]

@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -9,6 +10,21 @@ namespace Veterinaria.Web.Models
     // Para agregar datos de perfil del usuario, agregue más propiedades a su clase ApplicationUser. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
     public class ApplicationUser : IdentityUser
     {
+        [Display(Name = "Nombre")]
+        [MaxLength(50)]
+        public string FirstName { get; set; }
+        [Display(Name = "Apellido")]
+        [MaxLength(50)]
+
+        public string LastName { get; set; }
+        [Display(Name = "Dirección")]
+        [MaxLength(400)]
+
+        public string Address { get; set; }
+        [Display(Name = "Picture")]
+
+        public string imgurl { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Tenga en cuenta que el valor de authenticationType debe coincidir con el definido en CookieAuthenticationOptions.AuthenticationType
@@ -34,6 +50,8 @@ namespace Veterinaria.Web.Models
         public DbSet<Consult> Consults { get; set; }
         public DbSet<Veterinary> Veterinaries { get; set; }
         public DbSet<History> Histories { get; set; }
+        public DbSet<Manager> Managers { get; set; }
+
 
 
 
