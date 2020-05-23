@@ -17,7 +17,8 @@ namespace Veterinaria.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             this.CheckRoles();
-            Utilities.CheckSuperUser();
+            Utilities.CheckSuperUser(); 
+            Utilities.CheckClientDefault();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 

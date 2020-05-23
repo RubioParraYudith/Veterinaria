@@ -31,7 +31,16 @@ namespace Veterinaria.Web.Clase
             }
         }
 
-        private static void CreateUserASP(string email, string password, string rol)
+        internal static void CheckClientDefault()
+        {
+            var clientDb = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            var userClient = clientDb.FindByName("cliente@veterinary.com");
+            if (clientDb == null)
+            {
+                CreateUserASP("cliente@veterinary.com", "cliente123", "Owner");
+            }
+        }
+        public static void CreateUserASP(string email, string password, string rol)
         {
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             var userASP = new ApplicationUser()
