@@ -217,6 +217,15 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\cat-2536662_1920.jpg" />
+    <Content Include="Content\img\chicks-5014152_1920.jpg" />
+    <Content Include="Content\img\dog-2785077_1920.jpg" />
+    <Content Include="Content\img\dog-91765_1920.jpg" />
+    <Content Include="Content\img\hare-4375952_1280.jpg" />
+    <Content Include="Content\img\pet-4942796_1920.jpg" />
+    <Content Include="Content\img\pets-3715733_1920.jpg" />
+    <Content Include="Content\img\pets-4415649_1920.jpg" />
+    <Content Include="Content\img\puppy-1903313_1920.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
