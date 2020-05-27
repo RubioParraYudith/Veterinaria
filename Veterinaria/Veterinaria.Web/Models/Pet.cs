@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Migrations.Model;
 using System.Linq;
 using System.Web;
@@ -45,6 +46,9 @@ namespace Veterinaria.Web.Models
 
         public decimal Height { get; set; }
         public string ImgUrl { get; set; }
+
+        public int OwnerId { get; set; }
+        [ForeignKey("OwnerId")]
         public Owner Owner { get; set; }
         public ICollection<Consult> Consults { get; set; }
 
