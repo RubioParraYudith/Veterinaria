@@ -240,6 +240,7 @@
     <Content Include="Content\img\pets-3715733_1920.jpg" />
     <Content Include="Content\img\pets-4415649_1920.jpg" />
     <Content Include="Content\img\puppy-1903313_1920.jpg" />
+    <Content Include="Content\img\user.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />

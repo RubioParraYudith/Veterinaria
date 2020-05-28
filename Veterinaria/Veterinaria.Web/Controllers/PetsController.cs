@@ -56,7 +56,7 @@ namespace Veterinaria.Web.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create( Pet pet)
+        public ActionResult Create( Pet pet, HttpPostedFileBase hpb)
         {
             if (ModelState.IsValid)
             {

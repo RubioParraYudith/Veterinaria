@@ -4,79 +4,72 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+    <div class="row col-12 justify-content-center">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header py-2 bg-primary">
+                    <h4 class="text-center m-0 text-white">@Model.Name</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table table-sm">
+                        <tr>
+                            <td>Nombre:</td>
+                            <td>@Model.Name</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de Mascota:</td>
+                            <td>@Model.PetType</td>
+                        </tr>
+                        <tr>
+                            <td>Edad:</td>
+                            <td>@Model.Age Meses</td>
+                        </tr>
+                        <tr>
+                            <td>Fecha de Nacimiento</td>
+                            <td>@Model.BirthDate.ToShortDateString()</td>
+                        </tr>
+                        <tr>
+                            <td>Color</td>
+                            <td>@Model.Color</td>
+                        </tr>
+                        <tr>
+                            <td>Raza</td>
+                            <td>@Model.Race</td>
+                        </tr>
+                        <tr>
+                            <td>Peso</td>
+                            <td>@Model.Weight</td>
+                        </tr>
+                        <tr>
+                            <td>Altura</td>
+                            <td>@Model.Height</td>
+                        </tr>
+                    </table>
 
-<div>
-    <h4>Pet</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+                </div>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PetType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PetType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Age)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BirthDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Color)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Color)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Race)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Race)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Weight)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Weight)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Height)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Height)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-primary">
+                    <h6 class="text-white text-center">Fotografía</h6>
+                </div>
+                <div class="card-header">
+                    @if (Model.ImgUrl == null)
+                    {
+                        <img src="~/Content/img/user.png" class="img-thumbnail"/>
+                    }
+                    else if (Model.ImgUrl != null)
+                    {
+                        <img src="~/Content/img/@Model.ImgUrl" />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+            
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
