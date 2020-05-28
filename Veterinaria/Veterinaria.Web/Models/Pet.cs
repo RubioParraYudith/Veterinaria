@@ -19,7 +19,7 @@ namespace Veterinaria.Web.Models
         public string Name { get; set; }
         [Required]
         [Display(Name = "Tipo de Mascota")]
-        [MaxLength(50)]
+        [MaxLength(100)]
 
         public string PetType { get; set; }
         [Display(Name = "Edad")]
@@ -30,11 +30,11 @@ namespace Veterinaria.Web.Models
         public DateTime BirthDate { get; set; }
         [Required]
         [Display(Name = "Color")]
-        [MaxLength(50)]
+        [MaxLength(100)]
 
         public string Color { get; set; }
         [Display(Name = "Raza")]
-        [MaxLength(50)]
+        [MaxLength(100)]
 
         public string Race { get; set; }
         [Required]

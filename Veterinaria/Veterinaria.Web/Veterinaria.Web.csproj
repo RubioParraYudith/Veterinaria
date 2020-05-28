@@ -209,6 +209,10 @@
     <Compile Include="Migrations\202005271926156_ForeignPet.Designer.cs">
       <DependentUpon>202005271926156_ForeignPet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005280325099_update-Pets2.cs" />
+    <Compile Include="Migrations\202005280325099_update-Pets2.Designer.cs">
+      <DependentUpon>202005280325099_update-Pets2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Consult.cs" />
@@ -443,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005271926156_ForeignPet.resx">
       <DependentUpon>202005271926156_ForeignPet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005280325099_update-Pets2.resx">
+      <DependentUpon>202005280325099_update-Pets2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
