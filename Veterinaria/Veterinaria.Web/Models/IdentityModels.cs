@@ -10,6 +10,8 @@ namespace Veterinaria.Web.Models
     // Para agregar datos de perfil del usuario, agregue más propiedades a su clase ApplicationUser. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
     public class ApplicationUser : IdentityUser
     {
+        internal string hpb;
+
         [Display(Name = "Nombre")]
         [MaxLength(50)]
         public string FirstName { get; set; }
@@ -51,9 +53,6 @@ namespace Veterinaria.Web.Models
         public DbSet<Veterinary> Veterinaries { get; set; }
         public DbSet<History> Histories { get; set; }
         public DbSet<Manager> Managers { get; set; }
-
-
-
 
     }
 }
