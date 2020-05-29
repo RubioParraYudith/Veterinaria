@@ -50,20 +50,21 @@
             </div>
 
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class="card mb-4">
                 <div class="card-header bg-primary">
-                    <h6 class="text-white text-center">Fotografía</h6>
+                    <h6 class="text-white text-center">Fotografía </h6> 
                 </div>
                 <div class="card-header">
                     @if (Model.ImgUrl == null)
                     {
-                        <img src="~/Content/img/user.png" class="img-thumbnail"/>
+                        <img src="~/Content/img/user.png" class="img-thumbnail" />
                     }
                     else if (Model.ImgUrl != null)
                     {
-                        <img src="~/Content/img/@Model.ImgUrl" />
+                        <img src="~/Content/img/@Model.ImgUrl" class="img-thumbnail" width="550" />
                     }
+                    
                 </div>
             </div>
         </div>

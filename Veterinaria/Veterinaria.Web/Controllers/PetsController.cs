@@ -61,6 +61,13 @@ namespace Veterinaria.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                if(hpb!=null)
+                {
+                   var foto = System.IO.Path.GetFileName(hpb.FileName);
+                    var direccion = "~/Content/img/" + pet.Name + "_" + foto;
+                    hpb.SaveAs(Server.MapPath(direccion));
+                    pet.ImgUrl = pet.Name + "_" + foto;
+                }
                 var userId = User.Identity.GetUserId();
                 var own = db.Owners.Where(o => o.UserId == userId).FirstOrDefault(); db.Pets.Add(pet);
                 pet.OwnerId = own.Id;
