@@ -7,37 +7,43 @@
     <h5 class="m-0 text-dark"> Mis Mascotas</h5>
 
 </div>
-<p class="m-4">
-    <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
-        <span class="icon btn-icon-split text-white-50"><i class="fas fa-plus"></i></span>
-        <span class="text">Agregar Mascota</span>
-    </a>
-</p>
-<div class="row justify-content-center m-3">
-    @foreach (var item in Model)
-    {
-        <div class="col-xl-3 col-md-6 mb-4">
-            <a href="@Url.Action("Details","Pets", new { id = item.Id })">
+<div id="Principal">
+    <p class="m-4">
+        <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <span class="icon btn-icon-split text-white-50"><i class="fas fa-plus"></i></span>
+            <span class="text">Agregar Mascota</span>
+        </a>
+    </p>
+    <div id="ContenedorDeMascotas">
+        <div class="row justify-content-center m-3">
+            @foreach (var item in Model)
+            {
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <a href="@Url.Action("Details","Pets", new { id = item.Id })">
 
-                <div class="card border-left-primary shadow h-100 py-2 bg-dark">
-                    <div class="card-body bg-primary">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs  text-white text-uppercase mb-1">@item.Name</div>
-                                <div class="h5 mb-0 font-weight-bold text-white">@item.PetType</div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-paw fa-2x text-white"></i>
+                        <div class="card border-left-primary shadow h-100 py-2 bg-dark">
+                            <div class="card-body bg-primary">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs  text-white text-uppercase mb-1">@item.Name</div>
+                                        <div class="h5 mb-0 font-weight-bold text-white">@item.PetType</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-paw fa-2x text-white"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
-            </a>
+            }
+
 
         </div>
-    }
-
+    </div>
 </div>
+
 <!-- Large modal -->
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -64,7 +70,6 @@
                                 <label class="col-md-6">Tipo de Mascota</label>
                                 <div class="col-md-10">
                                     <input type="text" name="PetType" value="" class="form-control" />
-
                                 </div>
                             </div>
                         </div>
@@ -76,7 +81,6 @@
                                 <label class="col-md-2">Edad</label>
                                 <div class="col-md-8">
                                     <input type="number" name="Age" value="" placeholder="0" class="form-control" />
-
                                 </div>
                             </div>
                         </div>
@@ -92,17 +96,14 @@
 
                     <div class="row justify-content-between">
                         <div class="col-md-6">
-
                             <div class="form-group">
                                 <label class="col-md-2">Color</label>
                                 <div class="col-md-10">
                                     <input type="text" name="Color" value="" class="form-control" />
-
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-
                             <div class="form-group">
                                 <label class="col-md-2">Raza</label>
                                 <div class="col-md-10">
@@ -110,49 +111,34 @@
 
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
-
                     <div class="row justify-content-between">
                         <div class="col-md-6">
-
                             <div class="form-group">
                                 <label class="col-md-2">Peso</label>
                                 <div class="col-md-10">
                                     <input type="text" name="Weight" value="" placeholder="0.0" class="form-control" />
-
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-
                             <div class="form-group">
                                 <label class="col-md-2">Altura</label>
                                 <div class="col-md-10">
                                     <input type="text" name="Height" value="" placeholder="0.0" class="form-control" />
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-
-
 
                     <div class="form-group ">
                         Fotografia 
                         <div class="col-md-6 ">
                             <input type="file" name="hpb" value="" class="form-control-file " />
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-5">
-                            <input type="submit" name="submit" value="Guardar" class="btn btn-outline-primary btn-sm" />
-                        </div>
-                    </div>
+                    </div>             
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
                             <input type="submit" class="btn btn-info" value="Crear" />

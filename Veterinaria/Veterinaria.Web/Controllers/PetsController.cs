@@ -67,6 +67,7 @@ namespace Veterinaria.Web.Controllers
                     var direccion = "~/Content/img/" + pet.Name + "_" + foto;
                     hpb.SaveAs(Server.MapPath(direccion));
                     pet.ImgUrl = pet.Name + "_" + foto;
+
                 }
                 var userId = User.Identity.GetUserId();
                 var own = db.Owners.Where(o => o.UserId == userId).FirstOrDefault(); db.Pets.Add(pet);

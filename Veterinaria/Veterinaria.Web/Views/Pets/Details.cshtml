@@ -4,14 +4,14 @@
     ViewBag.Title = "Details";
 }
 
-    <div class="row col-12 justify-content-center">
+    <div class="row col-12 justify-content-center ">
         <div class="col-md-6">
-            <div class="card mb-4">
+            <div class="card mb-4 m-3">
                 <div class="card-header py-2 bg-primary">
                     <h4 class="text-center m-0 text-white">@Model.Name</h4>
                 </div>
-                <div class="card-body">
-                    <table class="table table-sm">
+                <div class="card-body bg-dark ">
+                    <table class="table table-sm text-white">
                         <tr>
                             <td>Nombre:</td>
                             <td>@Model.Name</td>
@@ -25,23 +25,23 @@
                             <td>@Model.Age Meses</td>
                         </tr>
                         <tr>
-                            <td>Fecha de Nacimiento</td>
+                            <td>Fecha de Nacimiento:</td>
                             <td>@Model.BirthDate.ToShortDateString()</td>
                         </tr>
                         <tr>
-                            <td>Color</td>
+                            <td>Color:</td>
                             <td>@Model.Color</td>
                         </tr>
                         <tr>
-                            <td>Raza</td>
+                            <td>Raza:</td>
                             <td>@Model.Race</td>
                         </tr>
                         <tr>
-                            <td>Peso</td>
+                            <td>Peso:</td>
                             <td>@Model.Weight</td>
                         </tr>
                         <tr>
-                            <td>Altura</td>
+                            <td>Altura:</td>
                             <td>@Model.Height</td>
                         </tr>
                     </table>
@@ -55,7 +55,7 @@
                 <div class="card-header bg-primary">
                     <h6 class="text-white text-center">Fotografía </h6> 
                 </div>
-                <div class="card-header">
+                <div class="card-header bg-dark">
                     @if (Model.ImgUrl == null)
                     {
                         <img src="~/Content/img/user.png" class="img-thumbnail" />
@@ -70,7 +70,7 @@
         </div>
     </div>
             
-    <p>
+    <p class="col-md-3">
         @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, new { @class = "btn btn-info btn-sm" }) 
         @Html.ActionLink("Regresar", "Index", new { id = Model.Id }, new { @class = "btn btn-warning btn-sm" }) 
         @Html.ActionLink("Eliminar", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger btn-sm" })
